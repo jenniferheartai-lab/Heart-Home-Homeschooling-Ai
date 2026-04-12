@@ -1,25 +1,35 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="../assets/css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutor Hub | 1854 Digital Academy</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
-
 <body>
+  <div id="nav"></div>
 
-<div id="nav"></div>
+  <main class="container">
+    <header class="page-header">
+      <h1>Meet Mr. Hawthorne</h1>
+      <p>
+        A courteous 1854 schoolmaster prepared to guide thee through reading,
+        arithmetic, writing, and the strange marvels of the modern age.
+      </p>
+    </header>
 
-<h1>Mr. Hawthorne</h1>
+    <section class="chat-shell">
+      <div id="chatbox" class="chat-box"></div>
+      <div class="chat-input-row">
+        <input id="input" type="text" placeholder="Pray tell thy question..." />
+        <button id="sendBtn">Send</button>
+      </div>
+    </section>
+  </main>
 
-<div id="chatbox"></div>
+  <div id="footer"></div>
 
-<input id="input" placeholder="Ask something..." />
-<button onclick="send()">Send</button>
-
-<div id="footer"></div>
-
-<script src="../assets/js/tutor.js"></script>
-<script src="../assets/js/components.js"></script>
-
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/tutor.js"></script>
 </body>
 </html>
