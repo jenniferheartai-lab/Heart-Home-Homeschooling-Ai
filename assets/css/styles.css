@@ -1,60 +1,361 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-margin: 0;
-font-family: Georgia, 'Times New Roman', serif;
-background-color: #f8f4e3;
-color: #2f2f2f;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: #f8f3e7;
+  color: #2f2a24;
+  line-height: 1.6;
 }
 
-nav {
-position: sticky;
-top: 0;
-background: #e8dcc0;
-padding: 10px;
-border-bottom: 2px solid #5a4a2f;
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
 }
 
-nav a {
-margin: 0 10px;
-text-decoration: none;
-color: #2f2f2f;
-font-weight: bold;
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #efe4c8;
+  border-bottom: 2px solid #7a6240;
+}
+
+.nav-inner {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 0;
+  gap: 0.75rem;
+}
+
+.brand {
+  font-weight: bold;
+  text-decoration: none;
+  color: #2f2a24;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2f2a24;
+  font-weight: 600;
 }
 
 .hero {
-text-align: center;
-padding: 40px;
-background: #efe6cc;
-border-bottom: 2px solid #5a4a2f;
+  background: linear-gradient(rgba(239, 228, 200, 0.9), rgba(248, 243, 231, 0.96));
+  border-bottom: 2px solid #7a6240;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  color: #6c5738;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.hero-text {
+  max-width: 700px;
+  margin: 1rem auto 0;
+  font-size: 1.05rem;
 }
 
 .cards {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 20px;
-padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  padding: 2rem 0 3rem;
 }
 
 .card {
-background: white;
-padding: 20px;
-border: 2px solid #5a4a2f;
-width: 200px;
-text-align: center;
+  background: #fffdf8;
+  border: 2px solid #7a6240;
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(60, 45, 25, 0.08);
+  transition: transform 0.2s ease;
 }
 
-.card a {
-display: inline-block;
-margin-top: 10px;
-padding: 5px 10px;
-background: #5a4a2f;
-color: white;
-text-decoration: none;
+.card h2 {
+  margin-top: 0;
 }
 
-footer {
-text-align: center;
-padding: 20px;
-background: #e8dcc0;
-margin-top: 20px;
+.button {
+  display: inline-block;
+  margin-top: 0.75rem;
+  text-decoration: none;
+  background: #6c5738;
+  color: #fff;
+  padding: 0.65rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #4f3f29;
 }
+
+.site-footer {
+  text-align: center;
+  background: #efe4c8;
+  border-top: 2px solid #7a6240;
+  padding: 1rem;
+}
+
+.page-header {
+  padding: 2rem 0 1rem;
+}
+
+.lesson-block {
+  background: #fffdf8;
+  border: 1px solid #b29467;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.chat-shell {
+  background: #fffdf8;
+  border: 2px solid #7a6240;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.chat-box {
+  min-height: 260px;
+  max-height: 420px;
+  overflow-y: auto;
+  border: 1px solid #b29467;
+  background: #faf6ee;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.chat-input-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.chat-input-row input {
+  flex: 1 1 240px;
+  padding: 0.8rem;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.chat-input-row button {
+  padding: 0.8rem 1rem;
+  font-family: inherit;
+  background: #6c5738;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 2.2rem 0;
+  }
+
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+        }* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: #f8f3e7;
+  color: #2f2a24;
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #efe4c8;
+  border-bottom: 2px solid #7a6240;
+}
+
+.nav-inner {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 0;
+  gap: 0.75rem;
+}
+
+.brand {
+  font-weight: bold;
+  text-decoration: none;
+  color: #2f2a24;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2f2a24;
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(rgba(239, 228, 200, 0.9), rgba(248, 243, 231, 0.96));
+  border-bottom: 2px solid #7a6240;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  color: #6c5738;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.hero-text {
+  max-width: 700px;
+  margin: 1rem auto 0;
+  font-size: 1.05rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  padding: 2rem 0 3rem;
+}
+
+.card {
+  background: #fffdf8;
+  border: 2px solid #7a6240;
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(60, 45, 25, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 0.75rem;
+  text-decoration: none;
+  background: #6c5738;
+  color: #fff;
+  padding: 0.65rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #4f3f29;
+}
+
+.site-footer {
+  text-align: center;
+  background: #efe4c8;
+  border-top: 2px solid #7a6240;
+  padding: 1rem;
+}
+
+.page-header {
+  padding: 2rem 0 1rem;
+}
+
+.lesson-block {
+  background: #fffdf8;
+  border: 1px solid #b29467;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.chat-shell {
+  background: #fffdf8;
+  border: 2px solid #7a6240;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.chat-box {
+  min-height: 260px;
+  max-height: 420px;
+  overflow-y: auto;
+  border: 1px solid #b29467;
+  background: #faf6ee;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.chat-input-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.chat-input-row input {
+  flex: 1 1 240px;
+  padding: 0.8rem;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.chat-input-row button {
+  padding: 0.8rem 1rem;
+  font-family: inherit;
+  background: #6c5738;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 2.2rem 0;
+  }
+
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  }
