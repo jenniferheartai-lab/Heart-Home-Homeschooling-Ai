@@ -1,11 +1,27 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("1854 Digital Academy main.js loaded");
+  const anchors = document.querySelectorAll('a[href^="#"]');
 
-  const cards = document.querySelectorAll(".card");
+  anchors.forEach((anchor) => {
+    anchor.addEventListener("click", (event) => {
+      const targetId = anchor.getAttribute("href");
+      const target = document.querySelector(targetId);
+
+      if (target) {
+        event.preventDefault();
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    });
+  });
+
+  const cards = document.querySelectorAll(".subject-card, .grade, .step-card");
+
   cards.forEach((card) => {
     card.addEventListener("mouseenter", () => {
       card.style.transform = "translateY(-4px)";
+      card.style.transition = "transform 0.2s ease";
     });
 
     card.addEventListener("mouseleave", () => {
